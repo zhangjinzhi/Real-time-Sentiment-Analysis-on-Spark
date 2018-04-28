@@ -7,12 +7,11 @@ def client(text):
  
     s.send(text)
  
-    data = s.recv(1000)  
-    print 'the data received is',data  
+    data = s.recv(1000) 
+    s.close()  
+    return data  
   
 
-  
-    s.close() 
 
-text = "I hate the trump."
+text = "I like the trump."
 client(text)

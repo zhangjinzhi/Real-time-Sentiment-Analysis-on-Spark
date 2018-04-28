@@ -21,7 +21,8 @@ inp = sc.textFile("hdfs:///text/new_textac").map(lambda row: row.split(" "))
 #inp = sc.textFile("file:///home/hduser/shiyanlou/word2vec/new_textaa").map(lambda row: row.split(" "))
 
 word2vec = Word2Vec()
-model = word2vec.setVectorSize(100).fit(inp)
+model = word2vec.setVectorSize(10).fit(inp)
+#model = word2vec.setVectorSize(100).fit(inp)
 
 
 model.save(sc, "hdfs:///model_text8_c")

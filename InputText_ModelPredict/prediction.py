@@ -52,7 +52,7 @@ stopwords = [u'rt', u're', u'i', u'me', u'my', u'myself', u'we', u'our',u'ours',
 # tokenize函数对tweets内容进行分词
 def tokenize(text):
     tokens = []
-    text = text.encode('ascii', 'ignore')  # to decode
+    text = text.decode('utf-8').encode('ascii', 'ignore')  # to decode
     text = re.sub('http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*(),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+', '',
                   text)  # to replace url with ''
     text = remove_spl_char_regex.sub(" ", text)  # Remove special characters
@@ -122,7 +122,7 @@ def process_text(text):
 
     return tweet_text
 
-sameModel = RandomForestModel.load(sc,"hdfs:///myModelPath")
+sameModel = RandomForestModel.load(sc,"hdfs:///myModelPath_2")
 
 
 
@@ -183,6 +183,7 @@ def server():
         label = model_predict(receive)
     
         ss.send(str(label))
+        print("message is sent")
     ss.close()
     s.close()   
 

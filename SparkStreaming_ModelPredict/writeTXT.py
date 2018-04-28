@@ -15,9 +15,9 @@ def showSentiment(record):
 
 def writeTXT(input_list):
 
-    txtName = "write_txt.txt"
+    txtName = "../website/test_write.txt"
     f_1=file(txtName, 'w+')
-    f_2=file("statistic.txt", 'w+')
+    f_2=file("../website/statistic.txt", 'w+')
     #for i in xrange(len(input_list)):
     #    f.write(input_list[i])
     pos_count = 0
