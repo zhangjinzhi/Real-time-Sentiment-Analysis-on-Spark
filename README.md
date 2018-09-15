@@ -8,7 +8,7 @@ This project, which combines sentiment analysis andclassification algorithm, wil
 
 The training process will be performed on the COMP7305 cluster that was built before.
 
-This project will also set up a web UI todemonstrate the classification result of sentiment analysis.
+This project will also set up a web UI to demonstrate the classification result of sentiment analysis.
 
 ## Getting Started
 
